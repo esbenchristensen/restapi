@@ -37,6 +37,7 @@ router.get("/", async (req, res) => {
             res.subscriber.subscribedToChannel = req.body.subscribedToChannel;
         }
         try {
+            $;
             const updatedSubscriber = await res.subscriber.save();
             res.json(updatedSubscriber);
         } catch (err) {
